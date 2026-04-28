@@ -32,3 +32,10 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+outputs/*.png
+outputs/binary.png
+outputs/gray.png
+outputs/blurred.png
+outputs/mask.png
+docs/sample_output.png
