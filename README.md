@@ -68,5 +68,5 @@ python src/pipeline.py
 ---
 
 ## Author
-**Khush Patel** — Sheridan College, Applied Computing  
+**Khush Patel** — aka GoldenRailgun  
 [LinkedIn](https://linkedin.com/in/khush-patel-mclaren) · [GitHub](https://github.com/GoldenRailgun)
