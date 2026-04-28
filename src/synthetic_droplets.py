@@ -118,7 +118,7 @@ if __name__ == "__main__":
         output_dir=output_dir,
         num_images=5,
         droplets_per_image=30,
-        seed_start=42,
+        seed_start=42, # change this for different droplet layouts
     )
 
     # Quick stats on the first image
