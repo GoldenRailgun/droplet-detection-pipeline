@@ -1,3 +1,13 @@
+---
+title: Droplet Detection Pipeline
+emoji: 💧
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_file: app.py
+pinned: false
+---
+
 # 💧 Droplet Detection & Size Distribution Pipeline
 
 > Classical computer vision pipeline for spray droplet detection and sizing.  
