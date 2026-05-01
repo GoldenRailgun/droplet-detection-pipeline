@@ -36,7 +36,8 @@ def apply_calibration(
 
     measured = []
     for d in droplets:
-        diameter_um = d.diameter_px / pixels_per_um
+        # correct for dark ring overestimation — ring boundary is ~12% larger than actual droplet
+        diameter_um = (d.diameter_px * 0.88) / pixels_per_um
 
         measured.append(MeasuredDroplet(
             id=d.id,

@@ -45,15 +45,13 @@ def apply_gaussian_blur(gray: np.ndarray, kernel_size: int = 5) -> np.ndarray:
 
 def apply_threshold(blurred: np.ndarray) -> tuple:
     """
-    Apply Otsu's method to find the optimal threshold automatically.
-    Analyses the image histogram and finds the best cutoff between
-    droplet pixels and background pixels — no manual tuning needed.
-    Returns both the binary mask and the threshold value so we can
-    log it and compare across images.
+    Apply Otsu thresholding for microscopy-style droplet images.
+    Droplets have dark diffraction rings on grey background.
+    We invert the result so dark rings become white in the mask.
     """
     thresh_val, binary = cv2.threshold(
         blurred, 0, 255,
-        cv2.THRESH_BINARY + cv2.THRESH_OTSU
+        cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU
     )
     return binary, thresh_val
 
